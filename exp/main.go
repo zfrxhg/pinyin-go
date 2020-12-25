@@ -16,7 +16,7 @@ func main() {}
 //export LoadPinyinDictionary
 func LoadPinyinDictionary(filename *C.char) {
 	var err error
-	dict, err = py.NewDictionary(GoString(filename))
+	dict, err = py.LoadDictionary(GoString(filename))
 	if err != nil {
 		panic(err)
 	}
